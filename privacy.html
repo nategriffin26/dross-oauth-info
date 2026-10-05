@@ -28,37 +28,37 @@
 <p>The app is intended for one user: me. It is used by my own n8n workflows and by my personal AI assistant, Dross, to act on my own Gmail account at my direction. It does not collect data from the public, and I do not run a service for other people.</p>
 
 <h2>Data accessed</h2>
-<p>Through Google OAuth, these tools can access the Gmail data that the granted permissions allow. That includes message content, metadata such as senders, recipients, subjects, dates, and labels, and attachments. The tools use that access to read, compose, send, and organize mail when I ask them to.</p>
+<p>Through Google OAuth, these tools can access the Gmail data that the granted permissions allow. Depending on granted permissions and the task, accessed data may include message content and metadata such as senders, recipients, subjects, dates, and labels, and attachments if a task accesses them. The tools use that access to read, compose, send, and organize mail for tasks I request, including automations I configure.</p>
 
 <h2>How data is used</h2>
 <ul>
-<li>Only to carry out tasks I request for my own mailbox, such as reading or summarizing mail, drafting and sending messages, and organizing mail.</li>
+<li>To carry out tasks I request for my own mailbox, including automations I configure, such as reading or summarizing mail, drafting and sending messages, and organizing mail.</li>
 <li>I do not sell Google user data.</li>
 <li>I do not use Google user data for advertising, and I do not share it with data brokers or advertisers.</li>
 </ul>
 
 <h2>Where data and credentials are stored</h2>
 <ul>
-<li>OAuth credentials and the data these tools handle are kept on my own Mac. They are managed by the tools I run there: Executor, which holds the connection, and pyDurable, my local assistant runtime.</li>
+<li>Dross uses Executor for its OAuth connection and pyDurable as its local assistant runtime on my Mac. These tools may store credentials and local copies of data.</li>
 <li>Those tools may also write local logs, task records, or other local data while they work. Depending on what a task involves, that local data can include content from Gmail.</li>
-<li>Workflows run in n8n keep their own connection details and data in my n8n setup, according to how I have configured it.</li>
+<li>n8n stores its connection details and workflow or execution data in its configured environment. This policy does not assert that n8n is hosted on my Mac.</li>
 </ul>
-<p>I do not state that Gmail content is never stored: local copies, logs, or task records may exist on my Mac for as long as my local retention settings keep them.</p>
+<p>Gmail-derived content may be retained in logs, task records, chat transcripts, summaries, and files. Retention varies by data store; this policy does not promise that content is never stored or has a single automatic expiry period.</p>
 
 <h2>AI providers</h2>
-<p>When I ask Dross, or a workflow that uses AI, to work with email, the relevant content may be sent to the AI model provider I have configured for that tool so that it can process it. That processing is subject to that provider’s own terms and privacy policy. I do not control, and this policy does not promise, how a third-party provider handles, retains, or uses data it receives. Other than these providers, which are used to process data on my behalf, I do not share Gmail data with third parties.</p>
+<p>When I ask Dross, or a workflow that uses AI, to work with email, the relevant content may be sent to the AI model provider I have configured for that tool so that it can process it. That processing is subject to that provider’s own terms and privacy policy. I do not control, and this policy does not promise, how a third-party provider handles, retains, or uses data it receives. When I direct a message to be sent, its content is transmitted to the intended recipients through Gmail. Configured AI providers and, where applicable, services hosting my n8n environment may also process relevant data.</p>
 
 <h2>Retention and deletion</h2>
-<p>Retention is configurable on my Mac. I can delete local credentials, logs, task records, and stored data at any time by removing them or changing the settings of the local tools. This policy does not set a fixed retention period. Messages in Gmail itself remain in my Google account until I delete them there.</p>
+<p>If pyDurable’s Gmail source cache is enabled, its refresh process removes dated cache files older than 30 days. This does not delete copies in other records. Forget can redact selected memory records but does not erase original chat transcripts or file history. Removing retained copies requires handling the relevant stores separately. n8n and AI-provider retention depend on their respective configuration and policies. Messages stored by Google remain subject to Gmail’s own deletion behavior.</p>
 
 <h2>Revoking access</h2>
-<p>Access can be revoked at any time in the Google Account settings under <em>Security → Your connections to third-party apps &amp; services</em> (also shown as <em>Third-party apps with account access</em>). Select “n8n workflow” and choose to remove access.</p>
+<p>Access can be revoked in Google Account settings. Follow <a href="https://support.google.com/accounts/answer/13533235?hl=en" rel="noopener">Google’s account-access instructions</a>, find “n8n workflow” under apps with access to your Google Account, and choose to remove access.</p>
 <div class="note">
-<p><strong>Warning:</strong> this OAuth app is shared by more than one client, namely n8n and Dross. Revoking it in Google Account settings removes access for every client that uses it, so both stop working until I reconnect them. I can also disconnect a single tool locally by deleting its stored credentials on my Mac.</p>
+<p><strong>Warning:</strong> this Google Cloud OAuth app is shared with other personal OAuth clients. Revoking its access may interrupt n8n, Dross, and other clients using the same app. Removing credentials from one tool’s configured environment is a local action; it does not itself revoke Google’s authorization or delete previously obtained data.</p>
 </div>
 
 <h2>Security</h2>
-<p>I keep credentials in the local tools described above and limit use of this app to my own accounts and tools. No system is perfectly secure, so I cannot guarantee absolute security.</p>
+<p>I keep credentials in the tool environments described above and limit use of this app to my own accounts and tools. No system is perfectly secure, so I cannot guarantee absolute security.</p>
 
 <h2>Children</h2>
 <p>This app is not directed to children and is not offered to the public.</p>
