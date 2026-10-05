@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy – n8n workflow (personal Google OAuth app)</title>
+<meta name="description" content="Privacy policy for a single-user, personal Google OAuth app operated by Nate Griffin.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<strong>n8n workflow – personal OAuth app</strong>
+<p>Operated by Nate Griffin</p>
+<nav aria-label="Site">
+<ul>
+<li><a href="index.html">About this app</a></li>
+<li><a href="privacy.html" aria-current="page">Privacy policy</a></li>
+</ul>
+</nav>
+</header>
+<main id="main">
+<h1>Privacy policy</h1>
+<p>Last updated: 2026-10-05</p>
+<p>This policy covers the Google Cloud OAuth app shown as <strong>“n8n workflow”</strong> on Google’s consent screen. It is a personal, single-user app operated by Nate Griffin (“I”) for my own Gmail account. See the <a href="index.html">app description</a>. This app is not affiliated with n8n GmbH, and I do not claim that Google has reviewed, verified, or certified it.</p>
+
+<h2>Whose data this is</h2>
+<p>The app is intended for one user: me. It is used by my own n8n workflows and by my personal AI assistant, Dross, to act on my own Gmail account at my direction. It does not collect data from the public, and I do not run a service for other people.</p>
+
+<h2>Data accessed</h2>
+<p>Through Google OAuth, these tools can access the Gmail data that the granted permissions allow. That includes message content, metadata such as senders, recipients, subjects, dates, and labels, and attachments. The tools use that access to read, compose, send, and organize mail when I ask them to.</p>
+
+<h2>How data is used</h2>
+<ul>
+<li>Only to carry out tasks I request for my own mailbox, such as reading or summarizing mail, drafting and sending messages, and organizing mail.</li>
+<li>I do not sell Google user data.</li>
+<li>I do not use Google user data for advertising, and I do not share it with data brokers or advertisers.</li>
+</ul>
+
+<h2>Where data and credentials are stored</h2>
+<ul>
+<li>OAuth credentials and the data these tools handle are kept on my own Mac. They are managed by the tools I run there: Executor, which holds the connection, and pyDurable, my local assistant runtime.</li>
+<li>Those tools may also write local logs, task records, or other local data while they work. Depending on what a task involves, that local data can include content from Gmail.</li>
+<li>Workflows run in n8n keep their own connection details and data in my n8n setup, according to how I have configured it.</li>
+</ul>
+<p>I do not state that Gmail content is never stored: local copies, logs, or task records may exist on my Mac for as long as my local retention settings keep them.</p>
+
+<h2>AI providers</h2>
+<p>When I ask Dross, or a workflow that uses AI, to work with email, the relevant content may be sent to the AI model provider I have configured for that tool so that it can process it. That processing is subject to that provider’s own terms and privacy policy. I do not control, and this policy does not promise, how a third-party provider handles, retains, or uses data it receives. Other than these providers, which are used to process data on my behalf, I do not share Gmail data with third parties.</p>
+
+<h2>Retention and deletion</h2>
+<p>Retention is configurable on my Mac. I can delete local credentials, logs, task records, and stored data at any time by removing them or changing the settings of the local tools. This policy does not set a fixed retention period. Messages in Gmail itself remain in my Google account until I delete them there.</p>
+
+<h2>Revoking access</h2>
+<p>Access can be revoked at any time in the Google Account settings under <em>Security → Your connections to third-party apps &amp; services</em> (also shown as <em>Third-party apps with account access</em>). Select “n8n workflow” and choose to remove access.</p>
+<div class="note">
+<p><strong>Warning:</strong> this OAuth app is shared by more than one client, namely n8n and Dross. Revoking it in Google Account settings removes access for every client that uses it, so both stop working until I reconnect them. I can also disconnect a single tool locally by deleting its stored credentials on my Mac.</p>
+</div>
+
+<h2>Security</h2>
+<p>I keep credentials in the local tools described above and limit use of this app to my own accounts and tools. No system is perfectly secure, so I cannot guarantee absolute security.</p>
+
+<h2>Children</h2>
+<p>This app is not directed to children and is not offered to the public.</p>
+
+<h2>Changes</h2>
+<p>I may update this policy as the setup changes. The date above shows the latest revision.</p>
+
+<h2>Contact</h2>
+<p>Nate Griffin: <a href="https://github.com/nategriffin26" rel="noopener">github.com/nategriffin26</a></p>
+</main>
+<footer>
+<p>Personal project by Nate Griffin. <a href="index.html">About this app</a></p>
+</footer>
+</body>
+</html>
